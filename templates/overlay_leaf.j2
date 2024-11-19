@@ -1,0 +1,26 @@
+service routing protocols model multi-agent
+
+
+router bgp {{ overlay['devices'][inventory_hostname]['BGP']['ASN'] }}
+   router-id {{ overlay['devices'][inventory_hostname]['BGP']['router_id']}}
+
+   no bgp default ipv4-unicast
+   maximum-paths 3
+   distance bgp 20 200 200
+
+
+   neighbor EVPN peer group
+   neighbor EVPN remote-as {{ overlay['global']['DC2']['spine_ASN']}}  
+   neighbor EVPN update-source Loopback0
+   neighbor EVPN ebgp-multihop 3
+   neighbor EVPN send-community extended
+   neighbor EVPN maximum-routes 0
+   
+
+{% for peer in overlay['global']['DC2']['spine_peers'] %}
+   neighbor {{ peer }} peer group EVPN
+{% endfor %}  
+ 
+   address-family evpn
+      neighbor EVPN activate
+   

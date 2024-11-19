@@ -1,0 +1,5 @@
+path: "{{lookup('env','PWD')}}" 
+
+CVP_CONFIGLETS_EVPN:
+ 
+CVP_DEVICES_EVPN:
