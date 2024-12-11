@@ -1,7 +1,7 @@
 ---
 # Make directories according to inventory file and cleanup last config
   - name: Make directories cleanup
-    hosts: leafs_DC2, spines_DC2
+    hosts: leafs, spines
     tasks:
     - name: Register variables underlay
       include_vars:
@@ -21,7 +21,7 @@
         dest: "{{ lookup('env','PWD') }}/configs/{{ inventory_hostname }}/{{ inventory_hostname }}_underlay.cfg"  
  
   - name: Create spine configurations for underlay
-    hosts: spines_DC2
+    hosts: spines
     tasks: 
     - name: Register variables (underlay)
       include_vars:
@@ -37,7 +37,7 @@
         dest: "{{lookup('env','PWD')}}/configs/{{inventory_hostname}}/{{inventory_hostname}}_overlay.cfg"
 
   - name: Create leaf configurations for underlay and VXLAN tenants
-    hosts: leafs_DC2
+    hosts: leafs
     tasks: 
     - name: Register variables (underlay)
       include_vars:
