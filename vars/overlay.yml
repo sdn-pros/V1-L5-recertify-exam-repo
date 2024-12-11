@@ -1,13 +1,5 @@
 global:
-  DC1:
-    spine_ASN: 65100
-    p2p: "192.168.103.0/24"
-    lo0: "192.168.101.0/24"
-    spine_peers:
-      - 192.168.101.101
-      - 192.168.101.102
-      - 192.168.101.103
-  DC2:
+  DC:
     spine_ASN: 65200
     p2p: "192.168.203.0/24"
     lo0: "192.168.201.0/24"
@@ -17,34 +9,34 @@ global:
       - 192.168.201.103
   MTU: 9214
 devices:
-  spine1-DC2:
+  spine1:
     BGP:
       ASN: 65200
       router_id: 192.168.201.101
-  spine2-DC2:
+  spine2:
      BGP:
       ASN: 65200
       router_id: 192.168.201.102
-  spine3-DC2:
+  spine3:
     BGP:
       ASN: 65200
       router_id: 192.168.201.103
-  leaf1-DC2:
+  leaf1:
     BGP: 
       ASN: 65201
       spine-ASN: 65200
       router_id: 192.168.201.11
-  leaf2-DC2:
+  leaf2:
     BGP: 
       ASN: 65201
       spine-ASN: 65200
       router_id: 192.168.201.12
-  leaf3-DC2:
+  leaf3:
     BGP:
       ASN: 65202
       spine-ASN: 65200
       router_id: 192.168.201.13
-  leaf4-DC2:
+  leaf4:
     BGP:
       ASN: 65202
       spine-ASN: 65200
