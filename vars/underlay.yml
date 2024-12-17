@@ -1,6 +1,6 @@
 ## DO NOT MODIFY THIS FILE
 global:
-  DC2:
+  DC:
     spine_ASN: 65200
   MTU: 9214
 devices:
