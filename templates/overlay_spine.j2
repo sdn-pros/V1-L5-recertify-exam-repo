@@ -10,7 +10,7 @@ router bgp {{ overlay['devices'][inventory_hostname]['BGP']['ASN'] }}
    distance bgp 20 200 200
 
    neighbor EVPN peer group
-   bgp listen range {{ overlay['global']['DC2']['lo0']}} peer-group EVPN peer-filter LEAF-AS-RANGE
+   bgp listen range {{ overlay['global']['DC']['lo0']}} peer-group EVPN peer-filter LEAF-AS-RANGE
    neighbor EVPN ebgp-multihop 3
    neighbor EVPN send-community
    neighbor EVPN maximum-routes 0
