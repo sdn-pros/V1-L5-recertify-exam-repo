@@ -12,7 +12,7 @@ interface {{ interface }}
   ip ospf network point-to-point
 {% endif %}
 {% endfor %}
-
+ip routing
 router ospf 100
   router-id {{ underlay['devices'][inventory_hostname]['interfaces']['loopback0']['ipv4']}}
 
