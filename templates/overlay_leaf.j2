@@ -17,7 +17,7 @@ router bgp {{ overlay['devices'][inventory_hostname]['BGP']['ASN'] }}
    neighbor EVPN maximum-routes 0
    
 
-{% for peer in overlay['global']['DC2']['spine_peers'] %}
+{% for peer in overlay['global']['DC']['spine_peers'] %}
    neighbor {{ peer }} peer group EVPN
 {% endfor %}  
  
