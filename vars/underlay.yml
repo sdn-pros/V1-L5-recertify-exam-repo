@@ -9,23 +9,17 @@ devices:
       loopback0: 
         ipv4: 10.2.0.101
         mask: 32
-      Ethernet2: 
+      Ethernet3: 
         ipv4: 10.2.2.1
         mask: 31
-      Ethernet3: 
+      Ethernet4: 
         ipv4: 10.2.2.7
         mask: 31
-      Ethernet4: 
+      Ethernet5: 
         ipv4: 10.2.2.13
         mask: 31
-      Ethernet5: 
-        ipv4: 10.2.2.19
-        mask: 31
       Ethernet6: 
-        ipv4: 10.2.2.25
-        mask: 31
-      Ethernet7: 
-        ipv4: 10.2.2.31
+        ipv4: 10.2.2.19
         mask: 31
     BGP:
       ASN: 65200
@@ -34,23 +28,17 @@ devices:
       loopback0: 
         ipv4: 10.2.0.102
         mask: 32
-      Ethernet2: 
+      Ethernet3: 
         ipv4: 10.2.2.3
         mask: 31
-      Ethernet3: 
+      Ethernet4: 
         ipv4: 10.2.2.9
         mask: 31
-      Ethernet4: 
+      Ethernet5: 
         ipv4: 10.2.2.15
         mask: 31
-      Ethernet5: 
-        ipv4: 10.2.2.21
-        mask: 31
       Ethernet6: 
-        ipv4: 10.2.2.27
-        mask: 31
-      Ethernet7: 
-        ipv4: 10.2.2.33
+        ipv4: 10.2.2.21
         mask: 31
     BGP:
       ASN: 65200
@@ -59,23 +47,17 @@ devices:
       loopback0: 
         ipv4: 10.2.0.103
         mask: 32
-      Ethernet2: 
+      Ethernet3: 
         ipv4: 10.2.2.5
         mask: 31
-      Ethernet3: 
+      Ethernet4: 
         ipv4: 10.2.2.11
         mask: 31
-      Ethernet4: 
+      Ethernet5: 
         ipv4: 10.2.2.17
         mask: 31
-      Ethernet5: 
-        ipv4: 10.2.2.23
-        mask: 31
       Ethernet6: 
-        ipv4: 10.2.2.29
-        mask: 31
-      Ethernet7: 
-        ipv4: 10.2.2.35
+        ipv4: 10.2.2.23
         mask: 31
     BGP:
       ASN: 65200
